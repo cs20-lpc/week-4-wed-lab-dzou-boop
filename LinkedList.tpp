@@ -70,6 +70,8 @@ void LinkedList<T>::copy(const LinkedList<T>& copyObj) {
         CopyTo = CopyTo->next;
         CopyFrom = CopyFrom->next;
     }
+
+    this->length =
 }
 
 template <typename T>
