@@ -115,6 +115,8 @@ void LinkedList<T>::insert(int position, const T& elem) {
         newNode->next = head;
         head = newNode;
     }
+
+    this->length++;
  
 }
 
