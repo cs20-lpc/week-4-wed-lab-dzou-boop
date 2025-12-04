@@ -65,6 +65,10 @@ void LinkedList<T>::copy(const LinkedList<T>& copyObj) {
             CopyFrom = head;
             CopyTo = copyObj->head;
         }
+
+        CopyTo->next = CopyFrom->next;
+        CopyTo = CopyTo->next;
+        CopyFrom = CopyFrom->next;
     }
 }
 
