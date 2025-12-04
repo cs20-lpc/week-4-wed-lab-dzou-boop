@@ -112,6 +112,12 @@ void LinkedList<T>::remove(int position) {
     for (int i = 0; i < position; i++) {
         currNode = currNode->next;
     }
+
+    if (position > 0) {
+
+    } else {
+        head = head->next;
+    }
 }
 
 template <typename T>
