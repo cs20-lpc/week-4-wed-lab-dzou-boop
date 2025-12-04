@@ -90,8 +90,13 @@ void LinkedList<T>::insert(int position, const T& elem) {
         currNode = currNode->next;
     }
 
-    newNode->next = currNode->next;
-    currNode->next = newNode;
+    if (position > 0) {
+        newNode->next = currNode->next;
+        currNode->next = newNode;
+    } else {
+        newNode->next = head;
+        head = newNode;
+    }
  
 }
 
@@ -103,6 +108,10 @@ bool LinkedList<T>::isEmpty() const {
 template <typename T>
 void LinkedList<T>::remove(int position) {
     // TODO
+    Node *currNode = head;
+    for (int i = 0; i < position; i++) {
+        currNode = currNode->next;
+    }
 }
 
 template <typename T>
