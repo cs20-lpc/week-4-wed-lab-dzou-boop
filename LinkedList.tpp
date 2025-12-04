@@ -127,7 +127,7 @@ template <typename T>
 void LinkedList<T>::remove(int position) {
     // TODO
 
-    if (position < 0 || position >= this->length) {
+    if (position < 0 || position > this->length) {
         throw string("replace: error, position out of bounds");
     }
     Node *currNode = head;
