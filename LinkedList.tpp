@@ -109,12 +109,13 @@ template <typename T>
 void LinkedList<T>::remove(int position) {
     // TODO
     Node *currNode = head;
-    for (int i = 0; i < position - 1; i++) {
+    for (int i = 0; i < position; i++) {
         currNode = currNode->next;
     }
 
     if (position > 0) {
-
+        Node *nodeToPointTo = currNode->next->next;
+        currNode->next = nodeToPointTo;
     } else {
         head = head->next;
     }
