@@ -115,9 +115,12 @@ void LinkedList<T>::remove(int position) {
 
     if (position > 0) {
         Node *nodeToPointTo = currNode->next->next;
+        delete currNode->next;
         currNode->next = nodeToPointTo;
     } else {
+        Node *nodeToDelete = head;
         head = head->next;
+        delete nodeToDelete;
     }
 }
 
