@@ -82,6 +82,12 @@ int LinkedList<T>::getLength() const {
 template <typename T>
 void LinkedList<T>::insert(int position, const T& elem) {
     // TODO
+    Node *newNode = new Node();
+    newNode->value = elem;
+
+    for (int i = 0; i < position - 1; i++) {
+        
+    }
 }
 
 template <typename T>
