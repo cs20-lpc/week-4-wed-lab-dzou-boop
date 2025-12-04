@@ -84,9 +84,10 @@ void LinkedList<T>::insert(int position, const T& elem) {
     // TODO
     Node *newNode = new Node();
     newNode->value = elem;
+    Node *currNode = head;
 
     for (int i = 0; i < position - 1; i++) {
-        
+        currNode = currNode->next;
     }
 }
 
