@@ -57,6 +57,11 @@ void LinkedList<T>::clear() {
 template <typename T>
 void LinkedList<T>::copy(const LinkedList<T>& copyObj) {
     // TODO
+    for (int i = 0; i < this->length; i++) {
+        if (i == 0) {
+            copyObj->head = head;
+        }
+    }
 }
 
 template <typename T>
