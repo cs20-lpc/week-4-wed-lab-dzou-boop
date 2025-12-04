@@ -109,7 +109,7 @@ template <typename T>
 void LinkedList<T>::remove(int position) {
     // TODO
     Node *currNode = head;
-    for (int i = 0; i < position; i++) {
+    for (int i = 0; i < position - 1; i++) {
         currNode = currNode->next;
     }
 
