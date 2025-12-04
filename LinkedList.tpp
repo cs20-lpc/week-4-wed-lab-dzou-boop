@@ -146,6 +146,8 @@ void LinkedList<T>::remove(int position) {
         head = head->next;
         delete nodeToDelete;
     }
+
+    this->length--;
 }
 
 template <typename T>
