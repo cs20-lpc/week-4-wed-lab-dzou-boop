@@ -57,21 +57,18 @@ void LinkedList<T>::clear() {
 template <typename T>
 void LinkedList<T>::copy(const LinkedList<T>& copyObj) {
     // TODO
-    Node *CopyFrom;
-    Node *CopyTo;
-    for (int i = 0; i < this->length; i++) {
-        if (i == 0) {
-            head = copyObj.head;
-            CopyFrom = copyObj.head;
-            CopyTo = head;
+    Node *currNode1 = copyObj.head;
+    Node *currNode2 = new Node();
+    head = currNode2;
+    this->length = copyObj.length;
+    for (int i = 0; i < copyObj.length; i++) {
+        currNode2->value = currNode1->value;
+        if (i != copyObj.length - 1) {
+        currNode2->next = new Node();
+        currNode1 = currNode1->next;
+        currNode2 = currNode2->next;
         }
-
-        CopyTo->next = CopyFrom->next;
-        CopyTo = CopyTo->next;
-        CopyFrom = CopyFrom->next;
     }
-
-    this->length = copyObj.getLength();
 }
 
 template <typename T>
